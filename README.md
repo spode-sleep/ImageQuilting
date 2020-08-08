@@ -39,6 +39,7 @@ Disable CORS on your browser (using some extension) and start playing with the a
 ## Results
 
 #### Some Results for Texture Synthesis
+
 | **Input Image** | **Synthesized Texture**|
 |:---:|:---:|
 | ![](https://raw.githubusercontent.com/tezansahu/ImageQuilting/master/images/t20.png) | ![](https://raw.githubusercontent.com/tezansahu/ImageQuilting/master/results/synthesis/t20_b=40_o=20_t=0_1.png) |
