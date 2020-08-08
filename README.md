@@ -40,7 +40,7 @@ Disable CORS on your browser (using some extension) and start playing with the a
 
 #### Some Results for Texture Synthesis
 | **Input Image** | **Synthesized Texture**|
-|:--:|:--:|
+|:---:|:---:|
 | ![](https://raw.githubusercontent.com/tezansahu/ImageQuilting/master/images/t20.png) | ![](https://raw.githubusercontent.com/tezansahu/ImageQuilting/master/results/synthesis/t20_b=40_o=20_t=0_1.png) |
 | ![](https://raw.githubusercontent.com/tezansahu/ImageQuilting/master/images/t11.png) | ![](https://raw.githubusercontent.com/tezansahu/ImageQuilting/master/results/synthesis/t11_b=50_o=20_t=0_1.png) |
 | ![](https://raw.githubusercontent.com/tezansahu/ImageQuilting/master/images/t17.jpeg) | ![](https://raw.githubusercontent.com/tezansahu/ImageQuilting/master/results/synthesis/t17_b=50_o=20_t=0_1.png) |
@@ -52,7 +52,7 @@ Disable CORS on your browser (using some extension) and start playing with the a
 #### Some Results for Texture Transfer
 
 | **Target Image** | **Texture Image** | **Result** |
-|:--:|:--:|:--:|
+|:---:|:---:|:---:|
 | ![](https://raw.githubusercontent.com/tezansahu/ImageQuilting/master/images/landscape.jpeg) | ![](https://raw.githubusercontent.com/tezansahu/ImageQuilting/master/images/van_gogh.jpeg) | ![](https://raw.github.com/tezansahu/ImageQuilting/master/results/transfer/van_gogh_landscape_b=10_o=5_a=0_2_t=0_1.png)|
 | ![](https://raw.githubusercontent.com/tezansahu/ImageQuilting/master/images/tezan.jpg) | ![](https://raw.githubusercontent.com/tezansahu/ImageQuilting/master/images/painting.jpg) | ![](https://raw.githubusercontent.com/tezansahu/ImageQuilting/master/results/transfer/painting_tezan_b=10_o=5_a=0_2_t=0_1.png)|
 | ![](https://raw.githubusercontent.com/tezansahu/ImageQuilting/master/images/lincoln.jpg) | ![](https://raw.githubusercontent.com/tezansahu/ImageQuilting/master/images/t4.jpg) | ![](https://raw.github.com/tezansahu/ImageQuilting/master/results/transfer/t4_lincoln_b=10_o=5_a=0_2_t=0_1.png)|
