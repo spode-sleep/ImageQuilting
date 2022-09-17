@@ -6,6 +6,7 @@ import textureSynthesis
 import textureTransfer
 import sys
 
+'''
 ## Get parser arguments
 parser = argparse.ArgumentParser()
 parser.add_argument("--synthesis", action="store_true", help="perform synthesis")
@@ -20,8 +21,10 @@ parser.add_argument("-s", "--scale", type=float, default=2, help="scaling w.r.t.
 parser.add_argument("-t", "--tolerance", type=float, default=0.1, help="tolerance fraction")
 parser.add_argument("-a", "--alpha", type=float, default=0.1, help="weightage of target image intensity error wrt texture boundary error")
 parser.add_argument("-T", "--threshold", type=int, help="threshold for object mask generation")
+parser.add_argument("-out", "--output_img_path", type=str, help="path of output")
 
 args = parser.parse_args()
+'''
 
 def LoadImage(infilename) :
     img = Image.open(infilename).convert('RGB')
@@ -46,11 +49,11 @@ def synthesis(args):
         # Save generated image if required
         img_name = args.img_path.split("/")[-1].split(".")[0]
         img_to_save = Image.fromarray(new_img.astype('uint8'), 'RGB')
-        img_to_save.save("../results/synthesis/" + img_name + "_b=" + str(args.block_size) + "_o=" + str(args.overlap) + "_t=" + str(args.tolerance).replace(".", "_") + ".png")
-    
+        img_to_save.save("synthesis.png")
+        return img_to_save
     except Exception as e:
         print("Error: ", e)
-        sys.exit(1)
+        return 0
 
 def transfer(args):
     try:
@@ -68,10 +71,11 @@ def transfer(args):
         texture_img_name = args.texture_img_path.split("/")[-1].split(".")[0]
         target_img_name = args.target_img_path.split("/")[-1].split(".")[0]
         img_to_save = Image.fromarray(new_img.astype('uint8'), 'RGB')
-        img_to_save.save("../results/transfer/" + texture_img_name + "_" + target_img_name + "_b=" + str(args.block_size) + "_o=" + str(args.overlap) + "_a=" + str(args.alpha).replace(".", "_") + "_t=" + str(args.tolerance).replace(".", "_") + ".png")
+        img_to_save.save("transfer.png")
+        return img_to_save
     except Exception as e:
         print("Error: ", e)
-        sys.exit(1)
+        return 0
 
 # def objectTextureTransfer(args):
 #     try:
@@ -81,7 +85,7 @@ def transfer(args):
 
 #         new_img = textureTransfer.Construct(texture_img, target_img, [args.block_size, args.block_size], args.overlap, args.alpha, args.tolerance)
 #         new_img = mask * new_img
-
+'''
 if __name__ == "__main__":
     if (args.synthesis and args.transfer): # or (args.synthesis and args.object_transfer) or (args.object_transfer and args.transfer) :
         print("Cannot perform synthesis & transfer simultaneously")
@@ -92,3 +96,4 @@ if __name__ == "__main__":
         transfer(args)
     # elif args.object_transfer:
     #     objectTextureTransfer(args)
+'''
