@@ -49,7 +49,7 @@ def synthesis(args):
         # Save generated image if required
         img_name = args.img_path.split("/")[-1].split(".")[0]
         img_to_save = Image.fromarray(new_img.astype('uint8'), 'RGB')
-        img_to_save.save("synthesis.png")
+        img_to_save.save(args.output_img_path)
         return img_to_save
     except Exception as e:
         print("Error: ", e)
@@ -71,7 +71,7 @@ def transfer(args):
         texture_img_name = args.texture_img_path.split("/")[-1].split(".")[0]
         target_img_name = args.target_img_path.split("/")[-1].split(".")[0]
         img_to_save = Image.fromarray(new_img.astype('uint8'), 'RGB')
-        img_to_save.save("transfer.png")
+        img_to_save.save(args.output_img_path)
         return img_to_save
     except Exception as e:
         print("Error: ", e)
